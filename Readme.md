@@ -4,8 +4,7 @@ Justify: utilizamos para alinhamento horizontal (eixo x).<br>
 Align: utilizamos para alinhamento vertical (eixo y).
 
 <h2>Alinhamento de Itens</h2>
-<p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o justify-items.</p>
-<p>Podemos usar 4 valores: start, end, center, stretch</p>
+<p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o 'justify/align-items'.</p>
 
 ###  CSS     
 ```css
@@ -14,6 +13,7 @@ Align: utilizamos para alinhamento vertical (eixo y).
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
     align-items: center;
     justify-items: center;
+    /* Podemos usar 4 valores: start, end, center, stretch */
 }
 ```
 
@@ -75,8 +75,6 @@ Align: utilizamos para alinhamento vertical (eixo y).
 
 <p>O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a area definida. (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid)</p>
 
-<p>Podemos usar 7 valores: start, end, strech, space-between, space-around, space-evenly.</p>
-
 ###  CSS   
 ```css
 .container{
@@ -84,6 +82,7 @@ Align: utilizamos para alinhamento vertical (eixo y).
     grid-template: 10px 10px 10px / 10px 10px 10px;
     align-content: center;
     justify-content: center;
+    /* Podemos usar 7 valores: start, end, strech, space-between, space-around, space-evenly. */  
 }
  ```
 ### HTML
