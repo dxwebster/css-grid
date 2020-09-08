@@ -21,12 +21,15 @@
     <p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse
       caso, ao centro de sua respectiva célula. Pra isso utilizamos o justify-items, onde o <b>align-items</b> refere-se
       ao alinhamento <b>vertical</b> e o <b>justify-items</b> ao alinhamento <b>horizontal</b>.</p>
+
+    <p>Podemos usar 4 valores: start, end, center, stretch</p>
+      
     <span class="code">
       .container{<br>
       display: grid;<br>
       grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;<br>
-      justify-items: center;<br>
-      align-items: center;<br>
+      <span class="highlight">align-items: center;</span><br>
+      <span class="highlight">justify-items: center</span>;<br>
       }
     </span>
 
@@ -41,65 +44,11 @@
       <div></div>
       <div></div>
     </div>
-
-    <p>Se eu trocar o alinhamento para "end", todos os itens que estão dentro do container, seguirão o mesmo
-      alinhamento. </p>
-
-    <span class="code">
-      .container{<br>
-      display: grid;<br>
-      grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;<br>
-      <span class="highlight">align-items: end;</span><br>
-      <span class="highlight">justify-items: end;</span><br>
-      }
-    </span>
-
-    <div class="container-1 end">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>Alinhamento de Content</h2>
-    <p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar no alinhamento do próprio container em
-      relação ao body, utilizando o 'justify-content'.</p>
-
-    <span class="code">
-      .container{<br>
-      display: grid;<br>
-      grid-template: 10px 10px 10px / 10px 10px 10px;<br>
-      <span class="highlight">align-content: center;</span><br>
-      <span class="highlight">justify-content: center;</span><br>
-      }
-    </span>
-
-    <div class="container-2">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
   </section>
 
   <section>
     <h2>Alinhamento Self</h2>
-    <p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar individualmente no alinhamento de
-      itens. Basta setar o 'align-self' e 'justify-self' no elemento filho do container que eu quero alinhar. No exemplo
-      abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamnetos ao centro. </p>
+    <p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar individualmente no alinhamento de itens. Basta setar o 'align/justify-self' no elemento filho do container que eu quero alinhar. No exemplo abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamnetos ao centro. </p>
 
     <span class="code">
       .container{<br>
@@ -127,6 +76,37 @@
       <div></div>
     </div>
 
+  </section>
+
+
+  <section>
+    <h2>Alinhamento de Content</h2>
+    <p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar no alinhamento do próprio grid, utilizando o 'justify/align-content'.</p>
+
+    <p>O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a area definida. (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid)</p>
+
+    <p>Podemos usar 7 valores: start, end, strech, space-between, space-around, space-evenly.</p>
+
+    <span class="code">
+      .container{<br>
+      display: grid;<br>
+      grid-template: 10px 10px 10px / 10px 10px 10px;<br>
+      <span class="highlight">align-content: center;</span><br>
+      <span class="highlight">justify-content: center;</span><br>
+      }
+    </span>
+
+    <div class="container-2">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </section>
 
 

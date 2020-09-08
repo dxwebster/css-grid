@@ -1,86 +1,81 @@
+<h1>Desvendando o CSS-GRID</h1>
 
-## GRID OU FLEXBOX
+<h2>Alinhamento de Itens</h2>
+<p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o justify-items, onde o <b>align-items</b> refere-se ao alinhamento <b>vertical</b> e o <b>justify-items</b> ao alinhamento <b>horizontal</b>.</p>
+<p>Podemos usar 4 valores: start, end, center, stretch</p>
+      
+```css
+.container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
+    align-items: center;
+    justify-items: center;
+}
+```
+<img src="readme/01.png"/>
 
-- Grid: Duas dimensões (colunas e linhas)
-- Flexbox: Uma dimensão (ou coluna ou linha)
-- Um complementa o trabalho do outro
-- Verificar quais navegadores ainda não estão aceitando o Grid
+<h2>Alinhamento Self</h2>
+<p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar individualmente no alinhamento de itens. Basta setar o 'align/justify-self' no elemento filho do container que eu quero alinhar. No exemplo abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamnetos ao centro. </p>
 
----
+```css
+.container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+}
 
+.center {
+    align-self: center;
+    justify-self: center;
+    background-color: green;
+}
 
-# Grid: Alinhamento
----
+```
+<img src="readme/02.png"/>
 
-Existem 6 propriedades para alinhamento:
-1. `justify-content`
-2. `align-content`
-3. `justify-items`
-4. `align-items`
-5. `justify-self`
-6. `align-self`
+<h2>Alinhamento de Content</h2>
+<p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar no alinhamento do próprio grid, utilizando o 'justify/align-content'.</p>
 
-Vamos separá-los em 2 grupos
-1. `justify` e `align`
-2.  `content`, `items` e `self`
+<p>O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a area definida. (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid)</p>
 
+<p>Podemos usar 7 valores: start, end, strech, space-between, space-around, space-evenly.</p>
 
----
+```css
+.container{
+    display: grid;
+    grid-template: 10px 10px 10px / 10px 10px 10px;
+    align-content: center;
+    justify-content: center;
+}
+ ```
 
-## Justify e Align
-
-
-Sabendo que o grid é bidimensional, nós temos o eixo x e o y.
-
-O **eixo x** é o posicionamento horizontal, da esquerda para a direita.
-
-O **eixo y** é o posicionamento vertical, de cima para baixo
-
-`Justify` trabalhará o eixo x.
-
-`Align` trabalhará o eixo y.
-
----
-
-## Content, Items e Self
-
-Juntando o `justify`, ou `align`, com esses elementos: `content`, `items` e `self`; nós observamos nossas propriedades
-
----
-
-### Content
-
-
-`justify-content` e `align-content` nos permite alinhar o próprio grid, relativo ao espaço fora do grid.
-
-O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que a area definida. (Por exemplo, quando usamos em px o tamanho do grid, poderemos terminar com um grid pequeno, para o tamanho da area do grid)
+<img src="readme/03.png"/>
 
 
-Podemos usar **7 valores**:
-1. start
-2. end
-3. center
-4. stretch
-5. space-between
-6. space-around
-7. space-evenly
+<section>
+<h2>Alinhamento por Template</h2>
+<p>Por meio do grid-template-areas podemos alinhar os elementos onde quisermos dentro de um container.</p>
 
----
-### Items
+```css
+.container{
+    display: grid;
+    grid-template: 20vh 30vh 10vh/3fr 1fr;
 
-`justify-items` e `align-items` vai permitir alinhar os items do nosso grid, em qualquer espaço disponível, na célula que ele habitar.
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
+```
 
-Podemos usar **4 valores**:
-1. start
-2. end
-3. center
-4. stretch
+<p>E para cada item eu defino, o nome com o 'grid-area'</p>
+
+```css
+header  {background: yellow; grid-area: header}
+main    {background: blue; grid-area: main}
+aside   {background: green; grid-area: aside}
+footer  {background: red; grid-area: footer}
+```
+
+<img src="readme/04.png"/>
 
 
----
-### Self
-
-`justify-self` e `align-self` vai nos permitir alinhar o item em si.
-
-
-Faz a mesma coisa que o `justify-items` e `align-items`, porém, aplicado diretamente no item de um grid
