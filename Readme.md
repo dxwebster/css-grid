@@ -39,7 +39,7 @@ Align: utilizamos para alinhamento vertical (eixo y).
 <img src="readme/01.png"/>
 
 <h2>Alinhamento Self</h2>
-<p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar **individualmente** no alinhamento de itens. Basta setar o 'align/justify-self' no elemento filho do container que eu quero alinhar. No exemplo abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamentos ao centro. </p>
+<p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar individualmente no alinhamento de itens. Basta setar o 'align/justify-self' no elemento filho do container que eu quero alinhar. No exemplo abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamentos ao centro. </p>
 
 ###  CSS    
 ```css
