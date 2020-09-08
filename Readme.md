@@ -1,26 +1,48 @@
 <h1>Desvendando o CSS-GRID</h1>
 
+Justify: utilizamos para alinhamento horizontal (eixo x).<br>
+Align: utilizamos para alinhamento vertical (eixo y).
+
 <h2>Alinhamento de Itens</h2>
-<p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o justify-items, onde o <b>align-items</b> refere-se ao alinhamento <b>vertical</b> e o <b>justify-items</b> ao alinhamento <b>horizontal</b>.</p>
+<p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o justify-items.</p>
 <p>Podemos usar 4 valores: start, end, center, stretch</p>
-      
+
+###  CSS     
 ```css
-.container{
+.container {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
     align-items: center;
     justify-items: center;
 }
 ```
+
+### HTML
+```html
+<div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+```
+
+
 <img src="readme/01.png"/>
 
 <h2>Alinhamento Self</h2>
 <p>Aqui temos um grid também com 3 linhas e 3 colunas, mas podemos trabalhar individualmente no alinhamento de itens. Basta setar o 'align/justify-self' no elemento filho do container que eu quero alinhar. No exemplo abaixo, os items em verde estão recebendo a classe 'center' que contém os alinhamnetos ao centro. </p>
 
+###  CSS    
 ```css
 .container{
     display: grid;
-    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
 
 .center {
@@ -29,6 +51,22 @@
     background-color: green;
 }
 
+```
+
+### HTML
+```html
+
+<div class="container">
+    <div></div>
+    <div class="center"></div>
+    <div></div>
+    <div></div>
+    <div class="center"></div>
+    <div></div>
+    <div></div>
+    <div class="center"></div>
+    <div></div>
+</div>
 ```
 <img src="readme/02.png"/>
 
@@ -39,6 +77,7 @@
 
 <p>Podemos usar 7 valores: start, end, strech, space-between, space-around, space-evenly.</p>
 
+###  CSS   
 ```css
 .container{
     display: grid;
@@ -47,6 +86,20 @@
     justify-content: center;
 }
  ```
+### HTML
+```html
+<div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+```
 
 <img src="readme/03.png"/>
 
@@ -58,7 +111,7 @@
 ```css
 .container{
     display: grid;
-    grid-template: 20vh 30vh 10vh/3fr 1fr;
+    grid-template: 20vh 30vh 10vh / 3fr 1fr;
 
     grid-template-areas:
     "header header"
@@ -76,6 +129,15 @@ aside   {background: green; grid-area: aside}
 footer  {background: red; grid-area: footer}
 ```
 
+### HTML
+```html
+<div class="container-4">
+    <header>Header</header>
+    <main>Main Content</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</div>
+```
 <img src="readme/04.png"/>
 
 
