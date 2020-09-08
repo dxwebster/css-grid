@@ -1,11 +1,10 @@
 <h1>Desvendando o CSS-GRID</h1>
 
-O Grid do CSS é uma técnica que permite criar layouts responsivos por meio do alinhamento de conteúdos e elementos em uma página HTML. Ele utiliza o método de linhas e colunas, onde podemos até definir regiões onde nossos elementos estarão na página. De início é importante manter em mente que o significado de dois termos, justify e align:
+O Grid do CSS é uma técnica que permite criar layouts responsivos por meio do alinhamento de conteúdos e elementos em uma página HTML. Ele utiliza o método de linhas e colunas, onde podemos até definir regiões onde nossos elementos estarão na página. De início é importante manter em mente que o significado de dois termos:
 
 Justify: utilizamos para alinhamento horizontal (eixo x).<br>
 Align: utilizamos para alinhamento vertical (eixo y).
 
-Podemos controlar o alinhamento de itens ou elementos dentro de um container.
 
 <h2>Alinhamento de Itens</h2>
 <p>Aqui estamos utilizando um grid com 3 linhas em 3 colunas, onde cada todos os item são alinhados juntos, nesse caso, ao centro de sua respectiva célula. Pra isso utilizamos o 'justify/align-items'.</p>
