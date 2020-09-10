@@ -143,3 +143,7 @@ footer  {background: red; grid-area: footer}
 <img src="readme/04.png"/>
 
 
+## 📕 Licença
+
+Todos os arquivos incluídos aqui, incluindo este _Readme_, estão sob [Licença MIT](./LICENSE).<br>
+Criado com ❤ por [Adriana Lima](https://github.com/dxwebster)
