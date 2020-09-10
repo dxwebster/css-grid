@@ -1,4 +1,9 @@
 <h1>Desvendando o CSS-GRID</h1>
+<h6 align=center>
+ 
+  Baseado no vídeo: [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk&feature=youtu.be)
+  
+</h6>
 
 O Grid do CSS é uma técnica que permite criar layouts responsivos por meio do alinhamento de conteúdos e elementos em uma página HTML. Ele utiliza o método de linhas e colunas, onde podemos até definir regiões onde nossos elementos estarão na página. De início é importante manter em mente que o significado de dois termos:
 
