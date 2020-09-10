@@ -1,5 +1,5 @@
-<h1 align=center>Desvendando o CSS-GRID</h1>
-<h6 align=center>
+<h1>Desvendando o CSS-GRID</h1>
+<h6>
  
   Baseado no vídeo: [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk&feature=youtu.be)
   
